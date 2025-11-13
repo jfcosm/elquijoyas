@@ -1,0 +1,26 @@
+{
+  "name": "elquijoyas",
+  "version": "0.1.0",
+  "description": "Sitio estático de El Quijoyas con Eleventy y Tailwind CSS",
+  "scripts": {
+    "build": "npm run build:css && npm run build:site",
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/styles.css --minify",
+    "build:site": "eleventy",
+    "dev:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/styles.css --watch",
+    "dev:site": "ELEVENTY_ENV=development eleventy --serve --watch"
+  },
+  "keywords": [
+    "eleventy",
+    "tailwind",
+    "sitio-estatico"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.10"
+  }
+}
