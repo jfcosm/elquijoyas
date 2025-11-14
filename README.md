@@ -1,8 +1,8 @@
-# El Quijoyas
+# Elqui Joyas
 
-Sitio estático generado con [Eleventy](https://www.11ty.dev/) y [Tailwind CSS](https://tailwindcss.com/) para la joyería artesanal El Quijoyas.
+Sitio estático generado con [Eleventy](https://www.11ty.dev/) y [Tailwind CSS](https://tailwindcss.com/) para la joyería artesanal Elqui Joyas.
 
-- **Dominio de producción:** https://elquijoyas.com
+- **Dominio de producción:** https://www.elquijoyas.cl
 - **Previsualización local:** http://localhost:8080
 
 ## Requisitos previos
@@ -53,4 +53,4 @@ Este repositorio incluye un workflow oficial (`.github/workflows/gh-pages.yml`) 
 1. Instala dependencias y ejecuta `npm run build`.
 2. Publica el contenido de `_site/` en GitHub Pages.
 
-El despliegue se dispara en cada push a la rama `main` y también puede ejecutarse manualmente desde la pestaña **Actions**. Si utilizas un dominio personalizado (por ejemplo `elquijoyas.com`), configúralo en los ajustes de Pages del repositorio y añade el archivo `CNAME` correspondiente en la carpeta `public/`.
+El despliegue se dispara en cada push a la rama `main` y también puede ejecutarse manualmente desde la pestaña **Actions**. Si utilizas un dominio personalizado (por ejemplo `www.elquijoyas.cl`), configúralo en los ajustes de Pages del repositorio y añade el archivo `CNAME` correspondiente en la carpeta `public/`.
