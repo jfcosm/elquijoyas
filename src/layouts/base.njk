@@ -1,5 +1,4 @@
 ---
-layout: null
 ---
 <!DOCTYPE html>
 <html lang="es" class="bg-neutral-50 text-neutral-900">
@@ -15,23 +14,24 @@ layout: null
   <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body class="min-h-screen bg-white text-neutral-900 antialiased">
-  <header class="mx-auto flex max-w-5xl items-center justify-between px-6 py-10">
+  <header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-10">
     <a href="/" class="font-display text-2xl font-semibold tracking-wide text-primary">El Quijoyas</a>
     <nav class="flex items-center gap-6 text-sm font-medium text-neutral-700">
       <a href="/" class="hover:text-primary">Inicio</a>
+      <a href="/catalogo/" class="hover:text-primary">Catálogo</a>
       <a href="/colecciones/" class="hover:text-primary">Colecciones</a>
       <a href="/contacto/" class="hover:text-primary">Contacto</a>
     </nav>
   </header>
-  <main class="mx-auto max-w-4xl px-6 pb-16">
+  <main class="mx-auto max-w-6xl px-6 pb-16">
     {% if intro %}
       <p class="lede">{{ intro }}</p>
     {% endif %}
     {{ content | safe }}
   </main>
   <footer class="bg-neutral-100 py-12 text-sm text-neutral-700">
-    <div class="mx-auto flex max-w-5xl flex-col gap-2 px-6 sm:flex-row sm:items-center sm:justify-between">
-      <p class="font-semibold text-neutral-900">© {{ "now" | date("yyyy") }} El Quijoyas</p>
+    <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 sm:flex-row sm:items-center sm:justify-between">
+      <p class="font-semibold text-neutral-900">© {% currentYear %} El Quijoyas</p>
       <p class="tracking-wide">Hecho a mano en Castilla-La Mancha.</p>
     </div>
   </footer>
