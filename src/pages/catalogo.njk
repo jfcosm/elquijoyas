@@ -47,6 +47,7 @@ products:
     materials: "Oro rosa 18k · Granate cushion"
     whatsappMessage: "Hola%20El%20Quijoyas,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20la%20Sortija%20Ventura."
 ---
+{% from "components/cta.njk" import ctaButton %}
 <section class="space-y-20">
   <header class="space-y-6 text-center">
     <p class="text-sm font-semibold uppercase tracking-[0.35em] text-primary">Catálogo completo</p>
@@ -75,14 +76,14 @@ products:
           </div>
         </dl>
         <div class="mt-auto flex flex-col gap-3">
-          <a
-            href="https://wa.me/34600111222?text={{ product.whatsappMessage }}"
-            class="inline-flex items-center justify-center rounded-full bg-secondary px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-neutral-900 transition hover:bg-secondary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-light"
-            target="_blank"
-            rel="noopener"
-          >
-            Consultar
-          </a>
+          {{ ctaButton(
+            'whatsapp',
+            'Consultar',
+            'https://wa.me/34600111222?text=' ~ product.whatsappMessage,
+            {
+              size: 'md'
+            }
+          ) | safe }}
           <p class="text-xs text-neutral-500 md:text-sm">Te responderemos en menos de 24 horas con asesoría personalizada.</p>
         </div>
       </article>
@@ -96,22 +97,19 @@ products:
       <p class="text-sm text-neutral-300 md:text-base">Cuéntanos tu historia, ocasión y preferencias de materiales para proponerte diseños exclusivos con renders y muestras físicas.</p>
     </div>
     <div class="mt-10 flex flex-col gap-4 md:mt-0 md:min-w-[18rem]">
-      <a
-        href="https://wa.me/34600111222?text=Hola%20El%20Quijoyas,%20quiero%20crear%20una%20joya%20a%20medida."
-        class="inline-flex items-center justify-center rounded-full bg-secondary px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-neutral-900 transition hover:bg-secondary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-light"
-        target="_blank"
-        rel="noopener"
-      >
-        Agenda un diseño personalizado
-      </a>
-      <a
-        href="https://www.instagram.com/elquijoyas"
-        class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-neutral-50 transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-        target="_blank"
-        rel="noopener"
-      >
-        Ver inspiración en Instagram
-      </a>
+      {{ ctaButton(
+        'whatsapp',
+        'Agenda un diseño personalizado',
+        'https://wa.me/34600111222?text=Hola%20El%20Quijoyas,%20quiero%20crear%20una%20joya%20a%20medida.',
+        {
+          size: 'md'
+        }
+      ) | safe }}
+      {{ ctaButton(
+        'instagram',
+        'Ver inspiración en Instagram',
+        'https://www.instagram.com/elquijoyas'
+      ) | safe }}
     </div>
   </section>
 </section>
