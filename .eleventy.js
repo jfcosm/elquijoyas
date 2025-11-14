@@ -5,6 +5,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src/styles/tailwind.css");
 
+  eleventyConfig.addShortcode("currentYear", () => new Date().getFullYear());
+
   return {
     dir: {
       input: "src",

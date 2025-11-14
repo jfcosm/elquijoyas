@@ -1,0 +1,117 @@
+---
+layout: base
+title: Catálogo
+description: "Explora nuestra colección completa de piezas disponibles para consulta personalizada."
+permalink: "/catalogo/"
+products:
+  - id: pendientes-aurora
+    name: Pendientes Aurora
+    collection: Colección Alba
+    description: "Láminas de oro reciclado y nácar tallado que crean destellos cálidos al moverse."
+    price: "320 €"
+    materials: "Oro reciclado 18k · Nácar natural"
+    whatsappMessage: "Hola%20El%20Quijoyas,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20Pendientes%20Aurora."
+  - id: anillo-insula
+    name: Anillo Ínsula
+    collection: Colección Nocturna
+    description: "Anillo de plata oxidada con ónix facetado en forma orgánica inspirada en la Ínsula Barataria."
+    price: "260 €"
+    materials: "Plata 925 · Ónix negro"
+    whatsappMessage: "Hola%20El%20Quijoyas,%20me%20gustar%C3%ADa%20consultar%20disponibilidad%20del%20Anillo%20%C3%8Dnsula."
+  - id: collar-venta
+    name: Collar Venta
+    collection: Colección Dulcinea
+    description: "Collar de platino con charms esmaltados que representan molinos, escudos y promesas eternas."
+    price: "480 €"
+    materials: "Platino · Esmalte vítreo"
+    whatsappMessage: "Hola%20El%20Quijoyas,%20quiero%20saber%20m%C3%A1s%20sobre%20el%20Collar%20Venta."
+  - id: brazalete-sanchica
+    name: Brazalete Sanchica
+    collection: Colección Ínsula
+    description: "Brazalete rígido de plata con grabados en bajo relieve inspirados en proverbios de Sancho."
+    price: "210 €"
+    materials: "Plata 925 · Patina artesanal"
+    whatsappMessage: "Hola%20El%20Quijoyas,%20podr%C3%ADan%20darme%20detalles%20del%20Brazalete%20Sanchica?"
+  - id: pendientes-galatea
+    name: Pendientes Galatea
+    collection: Colección Mareas
+    description: "Piezas en forma de espiral con perlas cultivadas y esmalte azul profundo."
+    price: "295 €"
+    materials: "Plata 925 · Perlas cultivadas"
+    whatsappMessage: "Hola%20El%20Quijoyas,%20estoy%20interesada%20en%20los%20Pendientes%20Galatea."
+  - id: sortija-ventura
+    name: Sortija Ventura
+    collection: Colección Caballería
+    description: "Sortija de oro rosa con granate cushion y filigrana inspirada en las armaduras de caballeros."
+    price: "540 €"
+    materials: "Oro rosa 18k · Granate cushion"
+    whatsappMessage: "Hola%20El%20Quijoyas,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20la%20Sortija%20Ventura."
+---
+<section class="space-y-20">
+  <header class="space-y-6 text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-primary">Catálogo completo</p>
+    <h1 class="font-display text-4xl font-semibold text-neutral-900 md:text-5xl xl:text-6xl">Joyas listas para tu próxima aventura</h1>
+    <p class="mx-auto max-w-2xl text-base text-neutral-700 md:text-lg">
+      {{ description }} Reserva una consulta personalizada para conocer disponibilidad, ajustes y tiempos de entrega.
+    </p>
+  </header>
+
+  <div class="grid gap-10 sm:grid-cols-2 xl:grid-cols-3">
+    {% for product in products %}
+      <article id="{{ product.id }}" class="flex flex-col gap-6 rounded-3xl border border-neutral-100 bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
+        <div class="space-y-3">
+          <p class="text-xs font-semibold uppercase tracking-[0.4em] text-primary">{{ product.collection }}</p>
+          <h2 class="font-display text-2xl font-semibold text-neutral-900 md:text-3xl">{{ product.name }}</h2>
+          <p class="text-sm text-neutral-600 md:text-base">{{ product.description }}</p>
+        </div>
+        <dl class="space-y-2 text-sm text-neutral-700">
+          <div class="flex items-center justify-between gap-4 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+            <dt>Precio</dt>
+            <dd>{{ product.price }}</dd>
+          </div>
+          <div class="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.3em] text-neutral-500 md:text-sm">
+            <dt class="font-medium text-neutral-600">Materiales</dt>
+            <dd class="text-right text-neutral-700">{{ product.materials }}</dd>
+          </div>
+        </dl>
+        <div class="mt-auto flex flex-col gap-3">
+          <a
+            href="https://wa.me/34600111222?text={{ product.whatsappMessage }}"
+            class="inline-flex items-center justify-center rounded-full bg-secondary px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-neutral-900 transition hover:bg-secondary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-light"
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar
+          </a>
+          <p class="text-xs text-neutral-500 md:text-sm">Te responderemos en menos de 24 horas con asesoría personalizada.</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <section class="rounded-3xl bg-neutral-900 px-8 py-14 text-neutral-100 sm:px-12 md:flex md:items-center md:justify-between md:gap-12 xl:px-16">
+    <div class="space-y-4 md:max-w-xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.35em] text-secondary-light">¿Quieres una pieza única?</p>
+      <h2 class="font-display text-3xl font-semibold text-white md:text-4xl">Crea tu joya a medida con nuestro equipo</h2>
+      <p class="text-sm text-neutral-300 md:text-base">Cuéntanos tu historia, ocasión y preferencias de materiales para proponerte diseños exclusivos con renders y muestras físicas.</p>
+    </div>
+    <div class="mt-10 flex flex-col gap-4 md:mt-0 md:min-w-[18rem]">
+      <a
+        href="https://wa.me/34600111222?text=Hola%20El%20Quijoyas,%20quiero%20crear%20una%20joya%20a%20medida."
+        class="inline-flex items-center justify-center rounded-full bg-secondary px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-neutral-900 transition hover:bg-secondary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-light"
+        target="_blank"
+        rel="noopener"
+      >
+        Agenda un diseño personalizado
+      </a>
+      <a
+        href="https://www.instagram.com/elquijoyas"
+        class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-neutral-50 transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        target="_blank"
+        rel="noopener"
+      >
+        Ver inspiración en Instagram
+      </a>
+    </div>
+  </section>
+</section>
