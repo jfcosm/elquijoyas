@@ -1,22 +1,22 @@
 ---
 layout: base
 title: Inicio
-description: "Joyería artesanal inspirada en la Mancha con asesoría personalizada para piezas únicas."
+description: "Joyería de autor nacida en Vicuña, Valle de Elqui. Piezas diseñadas por Nicolás Cordero con materiales responsables y energía del río Elqui."
 permalink: "/"
 hero:
-  title: "Joyas que cuentan historias manchegas"
-  description: "Fusionamos metales nobles con relatos quijotescos para crear piezas que celebran la valentía, el amor y la libertad."
+  title: "Joyería de autor desde el Valle de Elqui"
+  description: "Nicolás Cordero diseña piezas que abrazan la luz andina, combinando tradición familiar y vanguardia para joyas únicas hechas a mano en Vicuña."
   highlights:
-    - "Diseño artesanal contemporáneo"
-    - "Materiales trazables y responsables"
-    - "Piezas personalizables a medida"
+    - "Oficio familiar con más de 20 años en el Valle"
+    - "Materiales responsables y piedras del norte de Chile"
+    - "Diseños personalizados y envíos a todo Chile"
 ---
 {% from "components/cta.njk" import ctaButton %}
 
 <section class="space-y-24">
   <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary-light to-secondary-dark px-8 py-20 text-neutral-50 shadow-xl sm:px-12 md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-12 xl:px-16">
     <div class="space-y-8 md:max-w-xl">
-      <p class="text-sm uppercase tracking-[0.35em] text-secondary-light">Joyas con carácter</p>
+      <p class="text-sm uppercase tracking-[0.35em] text-secondary-light">Joyas con identidad elquina</p>
       <h1 class="font-display text-4xl font-semibold leading-tight md:text-5xl xl:text-6xl">{{ hero.title }}</h1>
       <p class="text-lg text-neutral-100 md:text-xl">{{ hero.description }}</p>
       <ul class="grid gap-3 text-sm font-medium uppercase tracking-wide md:grid-cols-2">
@@ -31,7 +31,7 @@ hero:
         {{ ctaButton(
           'whatsapp',
           'Consultar por WhatsApp',
-          'https://wa.me/34600111222?text=Hola%20El%20Quijoyas,%20quiero%20descubrir%20vuestras%20colecciones.',
+          'https://wa.me/56931983075?text=Hola%20Elqui%20Joyas,%20quiero%20conocer%20sus%20colecciones.',
           {
             size: 'lg',
             shadow: true
@@ -40,7 +40,7 @@ hero:
         {{ ctaButton(
           'instagram',
           'Síguenos en Instagram',
-          'https://www.instagram.com/elquijoyas',
+          'https://www.instagram.com/elqui_joyas',
           {
             size: 'lg'
           }
@@ -49,11 +49,9 @@ hero:
     </div>
     <div class="mt-12 hidden md:flex md:flex-col md:items-end md:gap-6">
       <picture class="overflow-hidden rounded-3xl shadow-2xl shadow-primary/30">
-        <source srcset="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=80&fm=webp" type="image/webp" />
-        <source srcset="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=80&fm=jpg" type="image/jpeg" />
         <img
-          src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=80"
-          alt="Artesana trabajando detalles de una joya con herramientas de banco"
+          src="/assets/images/anillo-amatista.png"
+          alt="Anillo de cobre envejecido con amatista natural engastada en plata fina creado por Elqui Joyas"
           class="h-80 w-64 object-cover"
           width="256"
           height="320"
@@ -61,45 +59,44 @@ hero:
         />
       </picture>
       <div class="rounded-3xl bg-white/10 p-6 text-right backdrop-blur">
-        <p class="text-sm uppercase tracking-[0.35em] text-secondary-light">Colección actual</p>
-        <p class="font-display text-2xl font-semibold text-white">Noches de la Mancha</p>
-        <p class="text-sm text-neutral-200">Edición limitada de 30 piezas con ónix negro y plata oxidada.</p>
+        <p class="text-sm uppercase tracking-[0.35em] text-secondary-light">Colección vigente</p>
+        <p class="font-display text-2xl font-semibold text-white">Colección Río Amatista</p>
+        <p class="text-sm text-neutral-200">Anillos en cobre envejecido y plata 950 con amatista natural del Valle de Elqui.</p>
       </div>
       <div class="flex gap-4">
-        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/20 font-display text-lg font-semibold text-white">Au</span>
         <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/20 font-display text-lg font-semibold text-white">Ag</span>
-        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/20 font-display text-lg font-semibold text-white">Pt</span>
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/20 font-display text-lg font-semibold text-white">Cu</span>
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/20 font-display text-lg font-semibold text-white">Au</span>
       </div>
     </div>
   </div>
 
-  <section id="historia" class="grid gap-12 md:grid-cols-[1fr_1.2fr] md:items-center">
+  <section id="taller" class="grid gap-12 md:grid-cols-[1fr_1.2fr] md:items-center">
     <div class="space-y-6">
-      <p class="text-sm font-semibold uppercase tracking-[0.35em] text-primary">Nuestra historia</p>
-      <h2 class="font-display text-3xl font-semibold text-neutral-900 md:text-4xl xl:text-5xl">Artesanía manchega con alma contemporánea</h2>
+      <p class="text-sm font-semibold uppercase tracking-[0.35em] text-primary">Nuestro taller</p>
+      <h2 class="font-display text-3xl font-semibold text-neutral-900 md:text-4xl xl:text-5xl">Tradición familiar y diseño contemporáneo</h2>
       <p class="text-base text-neutral-700 md:text-lg">
-        Desde un taller bañado por la luz de La Mancha, diseñamos joyas que reinterpretan las gestas de Don Quijote con una mirada moderna.
-        Cada pieza es elaborada a mano por un equipo de maestras joyeras que cuidan cada detalle, desde el boceto hasta el pulido final.
+        En el corazón de Vicuña, Nicolás Cordero hereda la maestría de generaciones de orfebres para dar vida a joyas que narran el paisaje del Valle de Elqui. Cada pieza se trabaja a mano respetando ritmos artesanales y procesos de bajo impacto ambiental.
       </p>
       <p class="text-base text-neutral-700 md:text-lg">
-        Trabajamos con materiales certificados, forjando joyas duraderas que acompañan momentos inolvidables. Personalizamos acabados, grabados y empaques para que cada historia se vuelva tangible.
+        Seleccionamos plata certificada, oro reciclado y piedras como la crisocola, amatista y lapislázuli provenientes del norte de Chile. El resultado son piezas llenas de luz, listas para acompañar hitos familiares, matrimonios y regalos con memoria.
       </p>
     </div>
     <div class="relative flex flex-col gap-8 rounded-3xl bg-neutral-100 p-8 shadow-inner md:p-10">
       <div class="space-y-2">
-        <p class="text-sm font-medium uppercase tracking-[0.3em] text-primary">2005</p>
-        <p class="font-display text-2xl font-semibold text-neutral-900">Fundación del taller</p>
-        <p class="text-sm text-neutral-600">Abrimos nuestras puertas en Campo de Criptana con una colección inspirada en Dulcinea.</p>
+        <p class="text-sm font-medium uppercase tracking-[0.3em] text-primary">2001</p>
+        <p class="font-display text-2xl font-semibold text-neutral-900">Nacimiento del taller</p>
+        <p class="text-sm text-neutral-600">Nicolás abre su primer espacio en Vicuña con una línea inspirada en el río Elqui.</p>
       </div>
       <div class="space-y-2">
-        <p class="text-sm font-medium uppercase tracking-[0.3em] text-primary">2015</p>
-        <p class="font-display text-2xl font-semibold text-neutral-900">Colecciones temáticas</p>
-        <p class="text-sm text-neutral-600">Exploramos nuevas técnicas de esmaltado y texturas para piezas que narran cada capítulo.</p>
+        <p class="text-sm font-medium uppercase tracking-[0.3em] text-primary">2014</p>
+        <p class="font-display text-2xl font-semibold text-neutral-900">Colecciones con identidad</p>
+        <p class="text-sm text-neutral-600">Integramos símbolos diaguitas y piedras locales en piezas de autor reconocidas a nivel nacional.</p>
       </div>
       <div class="space-y-2">
-        <p class="text-sm font-medium uppercase tracking-[0.3em] text-primary">2024</p>
-        <p class="font-display text-2xl font-semibold text-neutral-900">Expansión boutique digital</p>
-        <p class="text-sm text-neutral-600">Lanzamos experiencias personalizadas y asesoría virtual para clientas alrededor del mundo.</p>
+        <p class="text-sm font-medium uppercase tracking-[0.3em] text-primary">2022</p>
+        <p class="font-display text-2xl font-semibold text-neutral-900">Residencia astronómica</p>
+        <p class="text-sm text-neutral-600">Lanzamos experiencias nocturnas y asesoría virtual para clientas de Chile y el extranjero.</p>
       </div>
     </div>
   </section>
@@ -107,64 +104,67 @@ hero:
   <section id="destacados" class="space-y-12">
     <div class="space-y-4 text-center">
       <p class="text-sm font-semibold uppercase tracking-[0.35em] text-primary">Catálogo destacado</p>
-      <h2 class="font-display text-3xl font-semibold text-neutral-900 md:text-4xl xl:text-5xl">Piezas emblemáticas</h2>
+      <h2 class="font-display text-3xl font-semibold text-neutral-900 md:text-4xl xl:text-5xl">Piezas que iluminan el Valle</h2>
       <p class="mx-auto max-w-2xl text-base text-neutral-700 md:text-lg">
-        Descubre una selección curada de joyas que reflejan la esencia de nuestras colecciones permanentes. Cada pieza está disponible en cantidades limitadas.
+        Descubre una selección curada de joyas creadas en nuestro taller de Vicuña. Cada pieza está disponible en cantidades limitadas y puede personalizarse para tus celebraciones.
       </p>
     </div>
     <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
       <article class="flex flex-col gap-6 rounded-3xl border border-neutral-100 bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
         <div>
-          <p class="text-sm uppercase tracking-[0.35em] text-secondary">Colección Alba</p>
-          <h3 class="font-display text-2xl font-semibold text-neutral-900">Pendientes Aurora</h3>
+          <p class="text-sm uppercase tracking-[0.35em] text-secondary">Colección Río Amatista</p>
+          <h3 class="font-display text-2xl font-semibold text-neutral-900">Anillo Río Amatista</h3>
         </div>
-        <p class="text-sm text-neutral-600 md:text-base">Láminas de oro reciclado con nacar y un baño de brillo que captura la luz de los amaneceres manchegos.</p>
+        <p class="text-sm text-neutral-600 md:text-base">Cobre envejecido con grecas diaguitas, alma de plata 950 y amatista natural tallada en Vicuña.</p>
         <div class="flex items-center justify-between text-sm font-semibold uppercase tracking-[0.3em]">
-          <span class="text-primary">320 €</span>
-          <a href="/catalogo/#pendientes-aurora" class="text-neutral-500 transition hover:text-primary">Ver detalles</a>
+          <span class="text-primary">$188.000 CLP</span>
+          <a href="/catalogo/#anillo-rio-amatista" class="text-neutral-500 transition hover:text-primary">Ver detalles</a>
         </div>
       </article>
       <article class="flex flex-col gap-6 rounded-3xl border border-neutral-100 bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
         <div>
-          <p class="text-sm uppercase tracking-[0.35em] text-secondary">Colección Nocturna</p>
-          <h3 class="font-display text-2xl font-semibold text-neutral-900">Anillo Ínsula</h3>
+          <p class="text-sm uppercase tracking-[0.35em] text-secondary">Colección Gabriela</p>
+          <h3 class="font-display text-2xl font-semibold text-neutral-900">Collar Cumbre Gabriela</h3>
         </div>
-        <p class="text-sm text-neutral-600 md:text-base">Plata oxidada y ónix tallado en facetas asimétricas que recuerdan las aventuras nocturnas de Rocinante.</p>
+        <p class="text-sm text-neutral-600 md:text-base">Oro reciclado y cuarzo cristal montados en siluetas que evocan las montañas que inspiraron a Gabriela Mistral.</p>
         <div class="flex items-center justify-between text-sm font-semibold uppercase tracking-[0.3em]">
-          <span class="text-primary">260 €</span>
-          <a href="/catalogo/#anillo-insula" class="text-neutral-500 transition hover:text-primary">Ver detalles</a>
+          <span class="text-primary">$245.000 CLP</span>
+          <a href="/catalogo/#collar-cumbre-gabriela" class="text-neutral-500 transition hover:text-primary">Ver detalles</a>
         </div>
       </article>
       <article class="flex flex-col gap-6 rounded-3xl border border-neutral-100 bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
         <div>
-          <p class="text-sm uppercase tracking-[0.35em] text-secondary">Colección Dulcinea</p>
-          <h3 class="font-display text-2xl font-semibold text-neutral-900">Collar Venta</h3>
+          <p class="text-sm uppercase tracking-[0.35em] text-secondary">Colección Cielo Claro</p>
+          <h3 class="font-display text-2xl font-semibold text-neutral-900">Aros Cielo Serena</h3>
         </div>
-        <p class="text-sm text-neutral-600 md:text-base">Cadena de platino con charms esmaltados a mano que evocan molinos, lanzas y promesas eternas.</p>
+        <p class="text-sm text-neutral-600 md:text-base">Aros en plata con amatistas facetadas que capturan el brillo de las noches despejadas del valle.</p>
         <div class="flex items-center justify-between text-sm font-semibold uppercase tracking-[0.3em]">
-          <span class="text-primary">480 €</span>
-          <a href="/catalogo/#collar-venta" class="text-neutral-500 transition hover:text-primary">Ver detalles</a>
+          <span class="text-primary">$132.000 CLP</span>
+          <a href="/catalogo/#aros-cielo-serena" class="text-neutral-500 transition hover:text-primary">Ver detalles</a>
         </div>
       </article>
     </div>
   </section>
 
-  <section id="cta" class="rounded-3xl bg-neutral-900 px-8 py-16 text-neutral-100 sm:px-12 md:flex md:items-center md:justify-between md:gap-12 xl:px-16">
+  <section id="contacto" class="rounded-3xl bg-neutral-900 px-8 py-16 text-neutral-100 sm:px-12 md:flex md:items-center md:justify-between md:gap-12 xl:px-16">
     <div class="space-y-4 md:max-w-xl">
       <p class="text-sm font-semibold uppercase tracking-[0.35em] text-secondary-light">Agenda tu asesoría</p>
-      <h2 class="font-display text-3xl font-semibold text-white md:text-4xl">Diseñamos joyas para tus momentos más valientes</h2>
-      <p class="text-sm text-neutral-300 md:text-base">Reserva una consulta personalizada para descubrir combinaciones exclusivas, ajustes a medida y regalos con historia.</p>
+      <h2 class="font-display text-3xl font-semibold text-white md:text-4xl">Diseñamos joyas para tus momentos más luminosos</h2>
+      <p class="text-sm text-neutral-300 md:text-base">Coordinemos una videollamada o visita al taller para definir materiales, tallas y detalles personalizados. También enviamos a todo Chile.</p>
     </div>
     <div class="mt-10 flex flex-col gap-4 md:mt-0 md:min-w-[18rem]">
       {{ ctaButton(
         'whatsapp',
         'Escribir por WhatsApp',
-        'https://wa.me/34600111222?text=Hola%20El%20Quijoyas,%20quiero%20agendar%20una%20asesor%C3%ADa%20personalizada.'
+        'https://wa.me/56931983075?text=Hola%20Elqui%20Joyas,%20quiero%20agendar%20una%20asesor%C3%ADa.',
+        {
+          size: 'md'
+        }
       ) | safe }}
       {{ ctaButton(
         'instagram',
         'Conocer novedades en Instagram',
-        'https://www.instagram.com/elquijoyas'
+        'https://www.instagram.com/elqui_joyas'
       ) | safe }}
     </div>
   </section>
