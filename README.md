@@ -16,6 +16,16 @@ Sitio estático generado con [Eleventy](https://www.11ty.dev/) y [Tailwind CSS](
 npm install
 ```
 
+## Generación de assets
+
+Las fotografías pesadas (como el anillo destacado) se guardan en formato Base64 dentro de `assets/base64/` para evitar el error de GitHub **“Los archivos binarios no son compatibles”** al crear PR desde el editor web. Ejecuta:
+
+```bash
+npm run assets
+```
+
+Ese comando decodifica los archivos Base64 y los deja en `public/assets/images/`. Los scripts `npm run build` y `npm run dev:site` ya lo ejecutan automáticamente; úsalo de forma manual solo si necesitas regenerar las imágenes antes de otro comando.
+
 ## Desarrollo local
 
 En dos terminales separadas (o usando un gestor de procesos):

@@ -61,3 +61,21 @@ Sigue esta guía para publicar el sitio de Elqui Joyas en GitHub Pages usando el
 4. El workflow volverá a construir y publicar la última versión disponible en `main`.
 
 Con estos pasos el sitio se mantendrá desplegado de forma continua en GitHub Pages cada vez que se actualice la rama principal.
+
+---
+
+## 8. Solucionar el error “Los archivos binarios no son compatibles” al crear un PR
+
+Para eliminar este mensaje de forma definitiva, las imágenes pesadas del sitio se almacenan ahora como cadenas Base64 (`assets/base64/*.base64`). El script `npm run assets` decodifica esas cadenas y genera los archivos reales en `public/assets/images/` justo antes de compilar o levantar el servidor local. Por lo tanto, GitHub solo ve archivos de texto en los PR creados desde el navegador y no vuelve a mostrar el error.
+
+Cuando necesites reemplazar la fotografía principal, sigue estos pasos:
+
+1. Convierte la nueva imagen a Base64:
+   ```bash
+   base64 ruta/a/la-imagen.png > assets/base64/anillo-amatista.base64
+   ```
+2. Ejecuta `npm run assets` para regenerar `public/assets/images/anillo-amatista.png` localmente.
+3. Revisa el sitio en desarrollo o producción (`npm run dev:site` o `npm run build`).
+4. Haz commit solamente del archivo `.base64` (el PNG generado está en `.gitignore`).
+
+Este flujo mantiene los binarios fuera de los commits y permite crear PR desde el editor web sin errores.
