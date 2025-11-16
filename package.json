@@ -1,13 +1,15 @@
 {
   "name": "elquijoyas",
   "version": "0.1.0",
-  "description": "Sitio estático de El Quijoyas con Eleventy y Tailwind CSS",
+  "description": "Sitio estático de Elqui Joyas con Eleventy y Tailwind CSS",
   "scripts": {
-    "build": "npm run build:css && npm run build:site",
+    "assets": "node scripts/generate-assets.cjs",
+    "build": "npm run assets && npm run build:css && npm run build:site",
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/styles.css --minify",
     "build:site": "eleventy",
     "dev:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/styles.css --watch",
-    "dev:site": "ELEVENTY_ENV=development eleventy --serve --watch"
+    "dev:site": "ELEVENTY_ENV=development eleventy --serve --watch",
+    "predev:site": "npm run assets"
   },
   "keywords": [
     "eleventy",

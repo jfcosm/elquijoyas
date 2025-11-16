@@ -15,9 +15,9 @@
 - Fondo Verde Parronal (#3B6B4D) con texto en blanco (#FFFFFF) y acentos Café Arena Andina (#CFA980) en botones secundarios.
 
 ## Tipografías
-- **Primaria:** "Montserrat" (Sans Serif geométrica). Utilizar pesos 400, 600 y 700 para jerarquía en títulos y llamados a la acción.
-- **Secundaria:** "Work Sans" (Sans Serif humanista). Emplear pesos 300 y 400 para párrafos, descripciones de productos y testimonios.
-- **Alternativa para titulares editoriales:** "Playfair Display" puede emplearse en combinaciones especiales, pero mantener predominio Sans Serif para consistencia.
+- **Titulares y botones:** "Montserrat" (Sans Serif geométrica). Utilizar pesos 500, 600 y 700 para jerarquía en títulos y llamados a la acción.
+- **Párrafos y descripciones:** "Work Sans" (Sans Serif humanista). Emplear pesos 300, 400 y 500 para textos corridos y fichas de productos.
+- **Soporte digital:** Evitar serif; toda la identidad tipográfica debe mantenerse en Sans Serif para cumplir con el lineamiento de marca.
 
 ### Lineamientos de uso
 - Mantener interlineado amplio (1.5) para favorecer legibilidad en textos descriptivos sobre fondos claros.

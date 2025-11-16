@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="640" viewBox="0 0 900 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Anillo de cobre envejecido con amatista natural de Elqui Joyas</title>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#163422" />
+      <stop offset="100%" stop-color="#b98b5a" />
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="55%" r="65%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)" />
+    </radialGradient>
+    <linearGradient id="band" x1="0" x2="1" y1="0.4" y2="0.6">
+      <stop offset="0%" stop-color="#c77c3f" />
+      <stop offset="45%" stop-color="#8a4a1f" />
+      <stop offset="100%" stop-color="#5c2c13" />
+    </linearGradient>
+    <radialGradient id="gem" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#dcd1ff" />
+      <stop offset="40%" stop-color="#a079d6" />
+      <stop offset="100%" stop-color="#5f2a82" />
+    </radialGradient>
+    <radialGradient id="sparkle" cx="40%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="bezel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f7f8" />
+      <stop offset="100%" stop-color="#c8d0d3" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="640" fill="url(#bg)" />
+  <rect width="900" height="640" fill="url(#vignette)" />
+  <ellipse cx="380" cy="380" rx="270" ry="118" fill="url(#band)" opacity="0.95" />
+  <ellipse cx="380" cy="380" rx="170" ry="70" fill="#2b1a10" opacity="0.5" />
+  <ellipse cx="380" cy="380" rx="150" ry="60" fill="#1d1209" opacity="0.35" />
+  <g transform="translate(120, -60)">
+    <circle cx="480" cy="340" r="104" fill="url(#bezel)" />
+    <circle cx="480" cy="340" r="92" fill="url(#gem)" />
+    <circle cx="450" cy="310" r="54" fill="url(#sparkle)" />
+  </g>
+  <ellipse cx="330" cy="340" rx="60" ry="12" fill="#e9e2d8" opacity="0.55" />
+  <ellipse cx="520" cy="470" rx="120" ry="26" fill="#0d0b08" opacity="0.35" />
+</svg>
