@@ -4,7 +4,7 @@ Sigue esta guía para publicar el sitio de Elqui Joyas en GitHub Pages usando el
 
 ## 1. Preparar el repositorio
 
-1. Verifica que el código más reciente esté en la rama principal (`main` o `work`, según la configuración del repositorio).
+1. Verifica que el código más reciente esté en la rama `main`.
 2. Confirma que el archivo `.github/workflows/gh-pages.yml` se encuentra en el repositorio; es el workflow que automatiza el despliegue.
 3. Revisa que el archivo `package.json` contenga los scripts `build` y `dev` provistos por Eleventy.
 
@@ -15,7 +15,7 @@ Sigue esta guía para publicar el sitio de Elqui Joyas en GitHub Pages usando el
 3. En _Build and deployment_, selecciona **GitHub Actions** como fuente de publicación.
 4. Guarda los cambios si GitHub lo solicita.
 
-> Esta configuración solo debe realizarse una vez. A partir de aquí, cada push a la rama principal (`main` o `work`) disparará el workflow automático.
+> Esta configuración solo debe realizarse una vez. A partir de aquí, cada push a `main` disparará el workflow automático.
 
 ## 3. Añadir dominio personalizado (opcional)
 
@@ -38,11 +38,11 @@ Sigue esta guía para publicar el sitio de Elqui Joyas en GitHub Pages usando el
 
 ## 5. Desencadenar el despliegue automático
 
-1. Haz commit de tus cambios en la rama principal (`main` o `work`) y súbelos a GitHub:
+1. Haz commit de tus cambios en la rama `main` y súbelos a GitHub:
    ```bash
    git add .
    git commit -m "Actualiza contenido"
-   git push origin <rama-principal>
+   git push origin main
    ```
 2. GitHub ejecutará el workflow **Deploy Eleventy site** automáticamente. Puedes ver el progreso en la pestaña **Actions** del repositorio.
 3. Al finalizar, el job `deploy` publicará el contenido de `_site/` en GitHub Pages.
@@ -57,8 +57,8 @@ Sigue esta guía para publicar el sitio de Elqui Joyas en GitHub Pages usando el
 
 1. Ingresa a **Actions**.
 2. Selecciona el workflow **Deploy Eleventy site**.
-3. Haz clic en **Run workflow** y confirma la rama `main` o `work` (la que estés utilizando como fuente de despliegue).
-4. El workflow volverá a construir y publicar la última versión disponible en esa rama.
+3. Haz clic en **Run workflow** y confirma la rama `main`.
+4. El workflow volverá a construir y publicar la última versión disponible en `main`.
 
 Con estos pasos el sitio se mantendrá desplegado de forma continua en GitHub Pages cada vez que se actualice la rama principal.
 

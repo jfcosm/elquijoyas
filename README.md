@@ -63,4 +63,4 @@ Este repositorio incluye un workflow oficial (`.github/workflows/gh-pages.yml`) 
 1. Instala dependencias y ejecuta `npm run build`.
 2. Publica el contenido de `_site/` en GitHub Pages.
 
-El despliegue se dispara en cada push a la rama principal (`main` o `work`, según tu repositorio) y también puede ejecutarse manualmente desde la pestaña **Actions**. Si utilizas un dominio personalizado (por ejemplo `www.elquijoyas.cl`), configúralo en los ajustes de Pages del repositorio y añade el archivo `CNAME` correspondiente en la carpeta `public/`.
+El despliegue se dispara en cada push a la rama `main` y también puede ejecutarse manualmente desde la pestaña **Actions**. Si utilizas un dominio personalizado (por ejemplo `www.elquijoyas.cl`), configúralo en los ajustes de Pages del repositorio y añade el archivo `CNAME` correspondiente en la carpeta `public/`.
