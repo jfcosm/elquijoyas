@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html lang="es" class="bg-neutral-50 text-neutral-900">
 <head>
-  {% set siteName = "El Quijoyas" %}
-  {% set defaultDescription = "Joyería artesanal inspirada en La Mancha con piezas personalizables y asesoría experta." %}
-  {% set siteUrl = "https://elquijoyas.com" %}
-  {% set socialImage = ogImage or "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1200&h=630&q=85&fm=jpg" %}
+  {% set siteName = "Elqui Joyas" %}
+  {% set defaultDescription = "Joyería de autor creada por Nicolás Cordero en Vicuña, Valle de Elqui, con piezas inspiradas en la naturaleza y tradiciones del río Elqui." %}
+  {% set siteUrl = "https://www.elquijoyas.cl" %}
+  {% set socialImage = ogImage or "/assets/images/anillo-amatista.png" %}
   {% set metaDescription = description or defaultDescription %}
   {% set pageTitle = siteName %}
   {% if title %}
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{{ metaDescription }}" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#5B21B6" />
+  <meta name="theme-color" content="#3B6B4D" />
   <title>{{ pageTitle }}</title>
   <link rel="canonical" href="{{ canonicalUrl }}" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -28,17 +28,17 @@
   <meta property="og:title" content="{{ pageTitle }}" />
   <meta property="og:description" content="{{ metaDescription }}" />
   <meta property="og:image" content="{{ socialImage }}" />
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="959" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ pageTitle }}" />
   <meta name="twitter:description" content="{{ metaDescription }}" />
   <meta name="twitter:image" content="{{ socialImage }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" href="/assets/styles.css" as="style" />
   <link rel="stylesheet" href="/assets/styles.css" />
   <script type="application/ld+json">
@@ -50,15 +50,16 @@
       'url': canonicalUrl,
       'description': metaDescription,
       'image': socialImage,
-      'telephone': '+34 600 111 222',
+      'telephone': '+56 9 3198 3075',
       'address': {
         '@type': 'PostalAddress',
-        'addressCountry': 'ES',
-        'addressRegion': 'Castilla-La Mancha'
+        'addressCountry': 'CL',
+        'addressRegion': 'Coquimbo',
+        'addressLocality': 'Vicuña'
       },
       'sameAs': [
-        'https://www.instagram.com/elquijoyas',
-        'https://wa.me/34600111222'
+        'https://www.instagram.com/elqui_joyas',
+        'https://wa.me/56931983075'
       ]
     } | dump | safe }}
   </script>
@@ -71,23 +72,23 @@
   {% set navigationLinks = [
     {
       label: 'Inicio',
-      url: '/' 
+      url: '/'
+    },
+    {
+      label: 'Taller',
+      url: '/#taller'
     },
     {
       label: 'Catálogo',
       url: '/catalogo/'
     },
     {
-      label: 'Colecciones',
-      url: '/colecciones/'
-    },
-    {
       label: 'Contacto',
-      url: '/contacto/'
+      url: '/#contacto'
     }
   ] %}
   <header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-10" role="banner">
-    <a href="/" class="font-display text-2xl font-semibold tracking-wide text-primary">El Quijoyas</a>
+    <a href="/" class="font-display text-2xl font-semibold tracking-wide text-primary">Elqui Joyas</a>
     <nav class="flex items-center gap-6 text-sm font-medium text-neutral-700" aria-label="Navegación principal">
       <ul class="flex items-center gap-6">
         {% for item in navigationLinks %}
@@ -110,8 +111,8 @@
   </main>
   <footer class="bg-neutral-100 py-12 text-sm text-neutral-700">
     <div class="mx-auto flex max-w-6xl flex-col gap-2 px-6 sm:flex-row sm:items-center sm:justify-between">
-      <p class="font-semibold text-neutral-900">© {% currentYear %} El Quijoyas</p>
-      <p class="tracking-wide">Hecho a mano en Castilla-La Mancha.</p>
+      <p class="font-semibold text-neutral-900">© {% currentYear %} Elqui Joyas</p>
+      <p class="tracking-wide">Hecho a mano en Vicuña, Valle de Elqui.</p>
     </div>
   </footer>
 </body>
