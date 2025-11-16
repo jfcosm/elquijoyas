@@ -18,13 +18,13 @@ npm install
 
 ## Generación de assets
 
-La ilustración principal del anillo se regenera con:
+Las fotografías pesadas (como el anillo destacado) se guardan en formato Base64 dentro de `assets/base64/` para evitar el error de GitHub **“Los archivos binarios no son compatibles”** al crear PR desde el editor web. Ejecuta:
 
 ```bash
 npm run assets
 ```
 
-Ese comando escribe la ilustración SVG en `public/assets/images/`. Los scripts `npm run build` y `npm run dev:site` ya lo ejecutan automáticamente; úsalo de forma manual solo si necesitas regenerarla antes de otro comando.
+Ese comando decodifica los archivos Base64 y los deja en `public/assets/images/`. Los scripts `npm run build` y `npm run dev:site` ya lo ejecutan automáticamente; úsalo de forma manual solo si necesitas regenerar las imágenes antes de otro comando.
 
 ## Desarrollo local
 
@@ -63,4 +63,4 @@ Este repositorio incluye un workflow oficial (`.github/workflows/gh-pages.yml`) 
 1. Instala dependencias y ejecuta `npm run build`.
 2. Publica el contenido de `_site/` en GitHub Pages.
 
-El despliegue se dispara en cada push a la rama principal (`main` o `work`, según tu repositorio) y también puede ejecutarse manualmente desde la pestaña **Actions**. Si utilizas un dominio personalizado (por ejemplo `www.elquijoyas.cl`), configúralo en los ajustes de Pages del repositorio y añade el archivo `CNAME` correspondiente en la carpeta `public/`.
+El despliegue se dispara en cada push a la rama `main` y también puede ejecutarse manualmente desde la pestaña **Actions**. Si utilizas un dominio personalizado (por ejemplo `www.elquijoyas.cl`), configúralo en los ajustes de Pages del repositorio y añade el archivo `CNAME` correspondiente en la carpeta `public/`.

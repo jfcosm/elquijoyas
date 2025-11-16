@@ -4,7 +4,7 @@ Sigue esta guía para publicar el sitio de Elqui Joyas en GitHub Pages usando el
 
 ## 1. Preparar el repositorio
 
-1. Verifica que el código más reciente esté en la rama principal (`main` o `work`, según la configuración del repositorio).
+1. Verifica que el código más reciente esté en la rama `main`.
 2. Confirma que el archivo `.github/workflows/gh-pages.yml` se encuentra en el repositorio; es el workflow que automatiza el despliegue.
 3. Revisa que el archivo `package.json` contenga los scripts `build` y `dev` provistos por Eleventy.
 
@@ -15,7 +15,7 @@ Sigue esta guía para publicar el sitio de Elqui Joyas en GitHub Pages usando el
 3. En _Build and deployment_, selecciona **GitHub Actions** como fuente de publicación.
 4. Guarda los cambios si GitHub lo solicita.
 
-> Esta configuración solo debe realizarse una vez. A partir de aquí, cada push a la rama principal (`main` o `work`) disparará el workflow automático.
+> Esta configuración solo debe realizarse una vez. A partir de aquí, cada push a `main` disparará el workflow automático.
 
 ## 3. Añadir dominio personalizado (opcional)
 
@@ -38,11 +38,11 @@ Sigue esta guía para publicar el sitio de Elqui Joyas en GitHub Pages usando el
 
 ## 5. Desencadenar el despliegue automático
 
-1. Haz commit de tus cambios en la rama principal (`main` o `work`) y súbelos a GitHub:
+1. Haz commit de tus cambios en la rama `main` y súbelos a GitHub:
    ```bash
    git add .
    git commit -m "Actualiza contenido"
-   git push origin <rama-principal>
+   git push origin main
    ```
 2. GitHub ejecutará el workflow **Deploy Eleventy site** automáticamente. Puedes ver el progreso en la pestaña **Actions** del repositorio.
 3. Al finalizar, el job `deploy` publicará el contenido de `_site/` en GitHub Pages.
@@ -57,8 +57,8 @@ Sigue esta guía para publicar el sitio de Elqui Joyas en GitHub Pages usando el
 
 1. Ingresa a **Actions**.
 2. Selecciona el workflow **Deploy Eleventy site**.
-3. Haz clic en **Run workflow** y confirma la rama `main` o `work` (la que estés utilizando como fuente de despliegue).
-4. El workflow volverá a construir y publicar la última versión disponible en esa rama.
+3. Haz clic en **Run workflow** y confirma la rama `main`.
+4. El workflow volverá a construir y publicar la última versión disponible en `main`.
 
 Con estos pasos el sitio se mantendrá desplegado de forma continua en GitHub Pages cada vez que se actualice la rama principal.
 
@@ -66,12 +66,16 @@ Con estos pasos el sitio se mantendrá desplegado de forma continua en GitHub Pa
 
 ## 8. Solucionar el error “Los archivos binarios no son compatibles” al crear un PR
 
-Para eliminar este mensaje de forma definitiva, la ilustración destacada se genera como un SVG de texto mediante el script `npm run assets`, que escribe `public/assets/images/anillo-amatista.svg` antes de compilar o levantar el servidor local. Así, los PR no incluyen binarios pesados y GitHub no vuelve a mostrar el error.
+Para eliminar este mensaje de forma definitiva, las imágenes pesadas del sitio se almacenan ahora como cadenas Base64 (`assets/base64/*.base64`). El script `npm run assets` decodifica esas cadenas y genera los archivos reales en `public/assets/images/` justo antes de compilar o levantar el servidor local. Por lo tanto, GitHub solo ve archivos de texto en los PR creados desde el navegador y no vuelve a mostrar el error.
 
-Si quieres ajustar la ilustración (por ejemplo colores, degradados o proporciones), edita `scripts/generate-assets.cjs` y ejecuta:
+Cuando necesites reemplazar la fotografía principal, sigue estos pasos:
 
-```bash
-npm run assets
-```
+1. Convierte la nueva imagen a Base64:
+   ```bash
+   base64 ruta/a/la-imagen.png > assets/base64/anillo-amatista.base64
+   ```
+2. Ejecuta `npm run assets` para regenerar `public/assets/images/anillo-amatista.png` localmente.
+3. Revisa el sitio en desarrollo o producción (`npm run dev:site` o `npm run build`).
+4. Haz commit solamente del archivo `.base64` (el PNG generado está en `.gitignore`).
 
-Luego revisa el sitio en desarrollo o producción (`npm run dev:site` o `npm run build`) y sube los cambios del script y del SVG generado.
+Este flujo mantiene los binarios fuera de los commits y permite crear PR desde el editor web sin errores.
